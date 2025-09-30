@@ -1,4 +1,4 @@
-# Teams Bot Production Guide
+# Teams Bot 
 
 ## Overview
 This guide explains how to set up a Microsoft Teams bot that responds to messages. It covers Microsoft 365 navigation, Azure integration, authentication, bot configuration, Teams deployment, and Microsoft SDK usage.
