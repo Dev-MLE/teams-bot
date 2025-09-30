@@ -1,0 +1,40 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.13",
+    "version": "1.0.0",
+    "id": "36bd0239cc484e6b8a724eb3888999b9",
+    "packageName": "com.example.hellobot",
+    "developer": {
+        "name": "Shah Noor",
+        "websiteUrl": "https://example.com",
+        "privacyUrl": "https://example.com/privacy",
+        "termsOfUseUrl": "https://example.com/terms"
+    },
+    "name": {
+        "short": "Hello Bot",
+        "full": "Hello World Bot"
+    },
+    "description": {
+        "short": "Test bot",
+        "full": "A demo bot that replies in Teams"
+    },
+    "bots": [
+        {
+            "botId": null,
+            "scopes": [
+                "personal",
+                "team",
+                "groupchat"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "2455de81a2a0.ngrok-free.app"
+    ]
+}

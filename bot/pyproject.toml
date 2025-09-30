@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "src"
+version = "0.1.0"
+description = ""
+authors = ["developerrr-77 <shahnoorr9955@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+botbuilder-core = "^4.15.0"
+aiohttp = "^3.9.0"
+uvicorn = "^0.37.0"
+fastapi = "^0.118.0"
+botbuilder = "^0.0.1"
+dotenv = "^0.9.9"
+ngrok = "^1.5.1"
+pillow = "^11.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
