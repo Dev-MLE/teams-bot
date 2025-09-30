@@ -124,4 +124,70 @@ This covers setting up a Microsoft Teams bot with **Microsoft 365 Tenant**, **Az
 
 ## 3. Authentication & Environment
 - Store credentials in `.env`:
+1. APP_GUID
+2. APP_PASSWORD
+3. TENANT_ID
+- Microsoft SDK uses these credentials to authenticate and interact with Microsoft 365 services.
+
+---
+
+## 4. Bot Hosting & Code
+- Bot code receives Teams messages via **Azure Bot Resource** endpoint.  
+- Python code typically structured with:
+- **bot.py** → Handles incoming messages and replies
+- **app.py** → Hosts FastAPI/Uvicorn server, integrates Bot Framework Adapter  
+- SDK can be used inside bot logic to:
+- Access Teams messages, SharePoint, OneDrive, Exchange
+- Use AI services (LUIS, QnA Maker)  
+
+**References:**  
+- [Bot Framework SDK for Python](https://pypi.org/project/botbuilder-core/)  
+- [Microsoft Graph Python SDK](https://pypi.org/project/msgraph-core/)
+
+---
+
+## 5. Teams App Manifest
+- Defines bot capabilities, allowed domains, and endpoint URL.  
+- Include:
+- Bot App ID
+- Messaging endpoint URL
+- Scopes (personal, group chat, team)  
+- Upload via Teams App Studio or Teams interface.
+
+---
+
+## 6. Message Flow & Workflow
+1. User sends a message in Teams  
+2. Teams sends HTTP POST to Azure Bot Resource endpoint  
+3. Bot Framework passes activity to bot code  
+4. Bot code:
+ - Processes message
+ - Optionally uses Microsoft SDK to fetch data
+ - Generates response  
+5. Response sent back through Bot Framework → Teams → User  
+
+---
+
+## 7. Deployment
+- Local dev: Ngrok HTTPS tunneling  
+- Production:
+  - Hosted HTTPS endpoint
+  - Ensure credentials are secure
+  - Update Teams manifest to production endpoint
+  - Monitor logs via Azure Application Insights
+
+---
+
+## 8. Summary
+- **Microsoft 365 Tenant:** Hosts Teams environment  
+- **Azure App Registration:** Authentication credentials  
+- **Azure Bot Resource:** Connects bot to Teams  
+- **Microsoft SDK:** Access Microsoft 365 data and services  
+- Ngrok only for dev; production requires proper hosting  
+
+---
+
+This setup ensures the bot is **production-ready**, can respond anytime, and can access Microsoft 365 resources securely.
+
+
 
