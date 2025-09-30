@@ -1,7 +1,7 @@
 # Teams Bot Production Guide
 
 ## Overview
-This guide explains how to set up a Microsoft Teams bot that responds to messages. It covers Microsoft 365 navigation, Azure integration, authentication, bot configuration, Teams deployment, and optional Microsoft SDK usage. The goal is to provide a clear, production-ready workflow from credentials setup to Teams integration.
+This guide explains how to set up a Microsoft Teams bot that responds to messages. It covers Microsoft 365 navigation, Azure integration, authentication, bot configuration, Teams deployment, and Microsoft SDK usage.
 
 ---
 
@@ -73,7 +73,7 @@ This guide explains how to set up a Microsoft Teams bot that responds to message
 
 ---
 
-## 7. Microsoft Graph SDK (Optional)
+## 7. Microsoft Graph SDK 
 - Microsoft Graph SDK allows the bot to fetch dynamic data from Microsoft 365 services.
 - Provides programmatic access to Teams, SharePoint, OneDrive, etc.
 - SDK documentation: [https://learn.microsoft.com/en-us/graph/sdks/sdks-overview](https://learn.microsoft.com/en-us/graph/sdks/sdks-overview)
